@@ -1,5 +1,5 @@
 import { useReveal } from "@/hooks/useReveal";
-import { Clock, MapPin, Baby } from "lucide-react";
+import { Clock, MapPin, BookOpen } from "lucide-react";
 
 const services = [
   {
