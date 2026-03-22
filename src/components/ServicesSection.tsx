@@ -1,24 +1,24 @@
 import { useReveal } from "@/hooks/useReveal";
-import { Clock, MapPin, Baby } from "lucide-react";
+import { Clock, MapPin, BookOpen } from "lucide-react";
 
 const services = [
   {
     icon: Clock,
     title: "Sunday Worship",
-    detail: "9:00 AM & 11:00 AM",
-    sub: "Traditional & Contemporary services",
+    detail: "9:30 AM",
+    sub: "Join us every Sunday morning",
   },
   {
-    icon: Baby,
-    title: "Kids Ministry",
-    detail: "During all services",
-    sub: "Nursery through 5th grade",
+    icon: BookOpen,
+    title: "Friday Bible Study",
+    detail: "7:30 PM",
+    sub: "Midweek study and fellowship",
   },
   {
     icon: MapPin,
     title: "Location",
-    detail: "1234 Oak Grove Road",
-    sub: "Maplewood, MN 55109",
+    detail: "58 Cyril Rd",
+    sub: "High Wycombe, WA",
   },
 ];
 
