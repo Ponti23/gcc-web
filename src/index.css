@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,33 +6,37 @@
 
 @layer base {
   :root {
-    --background: 40 20% 97%;
-    --foreground: 200 15% 15%;
+    /* Heritage Forest palette */
+    --background: 42 40% 95%;       /* #F8F5EE paper */
+    --foreground: 135 9% 11%;       /* #1A1F1B ink */
 
-    --card: 0 0% 100%;
-    --card-foreground: 200 15% 15%;
+    --card: 42 40% 95%;
+    --card-foreground: 135 9% 11%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 200 15% 15%;
+    --popover: 42 40% 95%;
+    --popover-foreground: 135 9% 11%;
 
-    --primary: 152 35% 28%;
-    --primary-foreground: 40 20% 97%;
+    --primary: 142 33% 26%;         /* #2D5A3D brand-green */
+    --primary-foreground: 42 40% 95%;
 
-    --secondary: 40 18% 92%;
-    --secondary-foreground: 200 15% 15%;
+    --secondary: 107 11% 84%;       /* #D5DCD0 surface/sage */
+    --secondary-foreground: 135 9% 11%;
 
-    --muted: 40 12% 93%;
-    --muted-foreground: 200 8% 48%;
+    --muted: 107 11% 84%;
+    --muted-foreground: 135 6% 40%;
 
-    --accent: 30 60% 52%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 18 46% 57%;           /* #C97B5C clay */
+    --accent-foreground: 42 40% 95%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 40 14% 88%;
-    --input: 40 14% 88%;
-    --ring: 152 35% 28%;
+    --border: 107 10% 80%;
+    --input: 107 10% 80%;
+    --ring: 142 33% 26%;
+
+    /* Brand extras */
+    --brand-deep: 143 33% 18%;      /* #1F3D2A */
 
     --radius: 0.625rem;
 
@@ -49,25 +53,25 @@
   }
 
   .dark {
-    --background: 200 15% 10%;
-    --foreground: 40 20% 95%;
-    --card: 200 12% 14%;
-    --card-foreground: 40 20% 95%;
-    --popover: 200 12% 14%;
-    --popover-foreground: 40 20% 95%;
-    --primary: 152 40% 45%;
-    --primary-foreground: 200 15% 10%;
-    --secondary: 200 10% 18%;
-    --secondary-foreground: 40 20% 95%;
-    --muted: 200 10% 18%;
-    --muted-foreground: 200 8% 60%;
-    --accent: 30 60% 52%;
-    --accent-foreground: 0 0% 100%;
+    --background: 143 33% 12%;
+    --foreground: 42 40% 93%;
+    --card: 143 30% 16%;
+    --card-foreground: 42 40% 93%;
+    --popover: 143 30% 16%;
+    --popover-foreground: 42 40% 93%;
+    --primary: 142 33% 45%;
+    --primary-foreground: 143 33% 12%;
+    --secondary: 143 20% 22%;
+    --secondary-foreground: 42 40% 93%;
+    --muted: 143 20% 22%;
+    --muted-foreground: 107 8% 60%;
+    --accent: 18 46% 57%;
+    --accent-foreground: 42 40% 95%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 200 10% 22%;
-    --input: 200 10% 22%;
-    --ring: 152 40% 45%;
+    --border: 143 20% 26%;
+    --input: 143 20% 26%;
+    --ring: 142 33% 45%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -102,7 +106,26 @@
   }
 }
 
+@layer base {
+  :root {
+    --brand-green:  #2D5A3D;
+    --brand-deep:   #1F3D2A;
+    --brand-surface:#D5DCD0;
+    --brand-paper:  #F8F5EE;
+    --brand-accent: #C97B5C;
+    --brand-ink:    #1A1F1B;
+  }
+}
+
 @layer utilities {
+  .eyebrow {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: hsl(var(--muted-foreground));
+  }
+
   .section-padding {
     @apply py-20 md:py-28 px-6 md:px-12 lg:px-20;
   }

@@ -21,21 +21,21 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#F8F5EE]/90 backdrop-blur-md border-b border-[#D5DCD0]">
       <div className="max-w-7xl mx-auto flex items-center justify-between h-16 px-6">
-        <Link to="/" className="font-display text-xl text-foreground tracking-tight">
+        <Link to="/" className="font-display text-xl text-[#1F3D2A] tracking-tight font-semibold">
           Grace Community
         </Link>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-7">
           {links.map((l) =>
             l.href.startsWith("/") && !l.href.startsWith("/#") ? (
               <Link
                 key={l.href}
                 to={l.href}
-                className={`text-sm transition-colors duration-200 ${
-                  isActive(l.href) ? "text-foreground font-medium" : "text-muted-foreground hover:text-foreground"
+                className={`text-[13px] font-sans font-medium transition-colors duration-200 ${
+                  isActive(l.href) ? "text-[#2D5A3D]" : "text-[#1A1F1B]/60 hover:text-[#2D5A3D]"
                 }`}
               >
                 {l.label}
@@ -44,13 +44,13 @@ export default function Navbar() {
               <a
                 key={l.href}
                 href={l.href}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
+                className="text-[13px] font-sans font-medium text-[#1A1F1B]/60 hover:text-[#2D5A3D] transition-colors duration-200"
               >
                 {l.label}
               </a>
             )
           )}
-          <Button size="sm" asChild>
+          <Button size="sm" className="bg-[#2D5A3D] hover:bg-[#1F3D2A] text-[#F8F5EE]" asChild>
             <Link to="/about">Visit Us</Link>
           </Button>
         </div>
