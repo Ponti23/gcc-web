@@ -95,7 +95,7 @@ export default function About() {
               <div className="rounded-2xl bg-secondary/80 p-8 space-y-5">
                 <h3 className="text-xl font-semibold text-foreground">Our Community</h3>
                 <div className="flex flex-wrap gap-3">
-                  {["Filipino", "Indian", "Nepali", "African", "Australian", "Indonesian", "South African", "& many more"].map(
+                  {["Filipino", "Indian", "Nepali", "African", "Australian", "South African", "& more to come"].map(
                     (culture) => (
                       <span
                         key={culture}
@@ -118,7 +118,7 @@ export default function About() {
                   <p className="text-sm text-muted-foreground mt-1">Years of Ministry</p>
                 </div>
                 <div className="rounded-xl bg-card border border-border/50 p-6 text-center">
-                  <p className="text-3xl font-display text-primary">8+</p>
+                  <p className="text-3xl font-display text-primary">7+</p>
                   <p className="text-sm text-muted-foreground mt-1">Nations Represented</p>
                 </div>
               </div>

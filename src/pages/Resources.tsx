@@ -47,7 +47,7 @@ const resources = [
   {
     category: "articles" as const,
     title: "Raising Kingdom Kids in a Digital World",
-    author: "Ps Alex",
+    author: "Ps Alex Cabanlit",
     date: "March 4, 2026",
     series: null,
     excerpt: "Practical, grace-filled thoughts on discipling our children when screens compete for their hearts.",

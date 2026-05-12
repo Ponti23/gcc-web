@@ -1,4 +1,4 @@
-import heroImage from "@/assets/hero-church.jpg";
+import heroImage from "@/assets/church.png";
 import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
@@ -34,6 +34,9 @@ export default function HeroSection() {
               <a href="#sermons">Watch Sermons</a>
             </Button>
           </div>
+          <p className="text-primary-foreground/70 text-xl md:text-2xl italic pt-2 max-w-lg leading-relaxed">
+            "For the grace of God has appeared that offers salvation to all people." — Titus 2:11
+          </p>
         </div>
       </div>
     </section>

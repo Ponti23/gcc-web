@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,33 +6,33 @@
 
 @layer base {
   :root {
-    --background: 40 20% 97%;
-    --foreground: 200 15% 15%;
+    --background: 42 42% 95%;
+    --foreground: 132 9% 11%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 200 15% 15%;
+    --card: 42 42% 95%;
+    --card-foreground: 132 9% 11%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 200 15% 15%;
+    --popover: 42 42% 95%;
+    --popover-foreground: 132 9% 11%;
 
-    --primary: 152 35% 28%;
-    --primary-foreground: 40 20% 97%;
+    --primary: 141 33% 27%;
+    --primary-foreground: 42 42% 95%;
 
-    --secondary: 40 18% 92%;
-    --secondary-foreground: 200 15% 15%;
+    --secondary: 95 15% 84%;
+    --secondary-foreground: 132 9% 11%;
 
-    --muted: 40 12% 93%;
-    --muted-foreground: 200 8% 48%;
+    --muted: 95 10% 90%;
+    --muted-foreground: 132 6% 40%;
 
-    --accent: 30 60% 52%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 17 50% 57%;
+    --accent-foreground: 42 42% 95%;
 
     --destructive: 0 72% 51%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 42 42% 95%;
 
-    --border: 40 14% 88%;
-    --input: 40 14% 88%;
-    --ring: 152 35% 28%;
+    --border: 95 15% 82%;
+    --input: 95 15% 82%;
+    --ring: 141 33% 27%;
 
     --radius: 0.625rem;
 
@@ -99,6 +99,13 @@
 
   p {
     text-wrap: pretty;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono, 'JetBrains Mono', ui-monospace, monospace);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
   }
 }
 

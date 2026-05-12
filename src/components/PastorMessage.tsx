@@ -24,23 +24,22 @@ export default function PastorMessage() {
               part of the story God is writing here."
             </blockquote>
             <div>
-              <p className="text-foreground font-semibold">Pastor David Mitchell</p>
-              <p className="text-muted-foreground text-sm">Senior Pastor, Grace Community Church</p>
+              <p className="text-foreground font-semibold">Rev. Dr Dawson Elliott</p>
+              <p className="text-muted-foreground text-sm">Senior & Founding Pastor, Grace Community Church</p>
             </div>
             <Button variant="outline" className="mt-2">
               Read More Articles <ArrowRight className="w-4 h-4 ml-1" />
             </Button>
           </div>
 
-          {/* Placeholder for pastor photo */}
+          {/* Pastor photo */}
           <div className="lg:col-span-2 flex justify-center">
-            <div className="w-64 h-80 rounded-2xl bg-muted flex items-center justify-center overflow-hidden shadow-lg">
-              <div className="text-center space-y-2">
-                <div className="w-20 h-20 rounded-full bg-primary/10 mx-auto flex items-center justify-center text-3xl font-display text-primary">
-                  DM
-                </div>
-                <p className="text-sm text-muted-foreground">Pastor David</p>
-              </div>
+            <div className="w-64 h-80 rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src="/Ps_Dawson.PNG"
+                alt="Rev. Dr Dawson Elliott"
+                className="w-full h-full object-cover object-top"
+              />
             </div>
           </div>
         </div>
