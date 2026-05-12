@@ -2,6 +2,58 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useReveal } from "@/hooks/useReveal";
 
+function PastorCard({ pastor, i }: { pastor: typeof pastors[0]; i: number }) {
+  const ref = useReveal();
+  return (
+    <div
+      ref={ref}
+      className={`reveal grid lg:grid-cols-5 gap-10 items-start ${
+        i % 2 === 1 ? "lg:direction-rtl" : ""
+      }`}
+    >
+      {/* Photo */}
+      <div className={`lg:col-span-2 flex justify-center ${i % 2 === 1 ? "lg:order-2" : ""}`}>
+        <div className="w-full max-w-xs aspect-[3/4] rounded-2xl overflow-hidden bg-secondary shadow-lg">
+          {pastor.photo ? (
+            <img
+              src={pastor.photo}
+              alt={pastor.name}
+              className="w-full h-full object-cover object-top"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center">
+              <div className="text-center space-y-3">
+                <div className="w-24 h-24 rounded-full bg-primary/10 mx-auto flex items-center justify-center text-4xl font-display text-primary">
+                  {pastor.initials}
+                </div>
+                <p className="text-sm text-muted-foreground">{pastor.name}</p>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Bio */}
+      <div className={`lg:col-span-3 space-y-4 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
+        <p className="text-accent font-medium text-sm tracking-[0.15em] uppercase">
+          {pastor.role}
+        </p>
+        <h2 className="text-3xl md:text-4xl text-foreground leading-[1.1]">
+          {pastor.name}
+        </h2>
+        {pastor.credentials && (
+          <p className="text-sm text-muted-foreground font-medium">{pastor.credentials}</p>
+        )}
+        <div className="space-y-4 text-muted-foreground leading-relaxed pt-2">
+          {pastor.bio.split("\n\n").map((paragraph, j) => (
+            <p key={j}>{paragraph}</p>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 const pastors = [
   {
     name: "Rev. Dr Dawson Elliott",
@@ -68,8 +120,6 @@ He faithfully serves together with his wife, Precy, and they are blessed with tw
 ];
 
 export default function Leadership() {
-  const heroRef = useReveal();
-
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -91,54 +141,9 @@ export default function Leadership() {
 
       {/* Pastors */}
       <section className="section-padding bg-background">
-        <div ref={heroRef} className="reveal max-w-7xl mx-auto space-y-20">
+        <div className="max-w-7xl mx-auto space-y-20">
           {pastors.map((pastor, i) => (
-            <div
-              key={i}
-              className={`grid lg:grid-cols-5 gap-10 items-start ${
-                i % 2 === 1 ? "lg:direction-rtl" : ""
-              }`}
-            >
-              {/* Photo */}
-              <div className={`lg:col-span-2 flex justify-center ${i % 2 === 1 ? "lg:order-2" : ""}`}>
-                <div className="w-full max-w-xs aspect-[3/4] rounded-2xl overflow-hidden bg-secondary shadow-lg">
-                  {pastor.photo ? (
-                    <img
-                      src={pastor.photo}
-                      alt={pastor.name}
-                      className="w-full h-full object-cover object-top"
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center">
-                      <div className="text-center space-y-3">
-                        <div className="w-24 h-24 rounded-full bg-primary/10 mx-auto flex items-center justify-center text-4xl font-display text-primary">
-                          {pastor.initials}
-                        </div>
-                        <p className="text-sm text-muted-foreground">{pastor.name}</p>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              {/* Bio */}
-              <div className={`lg:col-span-3 space-y-4 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
-                <p className="text-accent font-medium text-sm tracking-[0.15em] uppercase">
-                  {pastor.role}
-                </p>
-                <h2 className="text-3xl md:text-4xl text-foreground leading-[1.1]">
-                  {pastor.name}
-                </h2>
-                {pastor.credentials && (
-                  <p className="text-sm text-muted-foreground font-medium">{pastor.credentials}</p>
-                )}
-                <div className="space-y-4 text-muted-foreground leading-relaxed pt-2">
-                  {pastor.bio.split("\n\n").map((paragraph, j) => (
-                    <p key={j}>{paragraph}</p>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <PastorCard key={i} pastor={pastor} i={i} />
           ))}
         </div>
       </section>
