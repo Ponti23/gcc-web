@@ -67,7 +67,9 @@ He is Christ-centred and missional, both locally and abroad. Leading the College
 
 Dawson has been instrumental in establishing the Equip College Network of Ministries (ECNM) which includes churches, para-church ministries, Christian Schools and Extension Bible Schools. Network partners are from Australia, Indonesia, Philippines and South Africa.
 
-Dawson is also the Founding/Senior Pastor of Grace Community Church — the official platform church of Equip College.`,
+Dawson is also the Founding/Senior Pastor of Grace Community Church — the official platform church of Equip College.
+
+Ps Dawson serves alongside his wife, Cheryl-lee.`,
   },
   {
     name: "Ps Anand Darshan",
