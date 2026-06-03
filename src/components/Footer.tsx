@@ -20,8 +20,7 @@ export default function Footer() {
               {[
                 { label: "About", to: "/about" },
                 { label: "Leadership", to: "/leadership" },
-                { label: "Resources", to: "/resources" },
-                { label: "Events", to: "/#events" },
+                { label: "Contact", to: "/contact" },
               ].map((link) => (
                 <Link
                   key={link.label}

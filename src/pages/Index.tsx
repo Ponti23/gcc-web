@@ -2,9 +2,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
-import EventsSection from "@/components/EventsSection";
 import PastorMessage from "@/components/PastorMessage";
-import SermonsSection from "@/components/SermonsSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -15,8 +13,6 @@ const Index = () => {
       <AboutSection />
       <ServicesSection />
       <PastorMessage />
-      <EventsSection />
-      <SermonsSection />
       <Footer />
     </div>
   );

@@ -22,32 +22,17 @@ test.describe("Desktop navigation", () => {
     await expect(page.getByRole("heading", { name: "Leadership" })).toBeVisible();
   });
 
-  test("navigates to /resources", async ({ page }) => {
+  test("navigates to /contact", async ({ page }) => {
     await page.goto("/");
-    await page.getByRole("link", { name: "Resources" }).first().click();
-    await expect(page).toHaveURL("/resources");
-    await expect(page.getByRole("heading", { name: "Resources" })).toBeVisible();
+    await page.getByRole("navigation").getByRole("link", { name: "Contact" }).click();
+    await expect(page).toHaveURL("/contact");
+    await expect(page.getByRole("heading", { name: /visit & contact/i })).toBeVisible();
   });
 
-  test("Events anchor link points to /#events", async ({ page }) => {
-    await page.goto("/");
-    // Scope to navbar to avoid matching the footer's Events link
-    const eventsLink = page.getByRole("navigation").getByRole("link", { name: "Events" });
-    const href = await eventsLink.getAttribute("href");
-    expect(href).toMatch(/#events/);
-  });
-
-  test("Contact anchor link points to /#contact", async ({ page }) => {
-    await page.goto("/");
-    const contactLink = page.getByRole("navigation").getByRole("link", { name: "Contact" });
-    const href = await contactLink.getAttribute("href");
-    expect(href).toMatch(/#contact/);
-  });
-
-  test('"Visit Us" navigates to /about', async ({ page }) => {
+  test('"Visit Us" navigates to /contact', async ({ page }) => {
     await page.goto("/");
     await page.getByRole("link", { name: "Visit Us" }).first().click();
-    await expect(page).toHaveURL("/about");
+    await expect(page).toHaveURL("/contact");
   });
 });
 
@@ -62,9 +47,8 @@ test.describe("Mobile hamburger menu", () => {
   test("tapping hamburger opens mobile menu with nav links", async ({ page }) => {
     await page.goto("/");
     await page.getByRole("button", { name: /toggle menu/i }).tap();
-    // Wait for menu to render and links to be visible
     await expect(page.getByRole("link", { name: "Leadership" }).first()).toBeVisible();
-    await expect(page.getByRole("link", { name: "Resources" }).first()).toBeVisible();
+    await expect(page.getByRole("link", { name: "Contact" }).first()).toBeVisible();
   });
 
   test("tapping a mobile menu link navigates correctly", async ({ page }) => {
@@ -79,11 +63,10 @@ test.describe("Mobile hamburger menu", () => {
     await page.goto("/");
     const toggle = page.getByRole("button", { name: /toggle menu/i });
     await toggle.tap();
-    await expect(page.getByRole("link", { name: "Resources" }).first()).toBeVisible();
+    await expect(page.getByRole("link", { name: "Contact" }).first()).toBeVisible();
     await toggle.tap();
-    // After close, Resources link in the mobile menu should be gone
     await page.waitForTimeout(300);
-    const mobileMenuLinks = page.locator('[class*="md:hidden"] a[href="/resources"]');
+    const mobileMenuLinks = page.locator('[class*="md:hidden"] a[href="/contact"]');
     await expect(mobileMenuLinks).not.toBeVisible();
   });
 });

@@ -1,6 +1,4 @@
 import { useReveal } from "@/hooks/useReveal";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 
 export default function PastorMessage() {
   const ref = useReveal();
@@ -27,9 +25,6 @@ export default function PastorMessage() {
               <p className="text-foreground font-semibold">Rev. Dr Dawson Elliott</p>
               <p className="text-muted-foreground text-sm">Senior & Founding Pastor, Grace Community Church</p>
             </div>
-            <Button variant="outline" className="mt-2">
-              Read More Articles <ArrowRight className="w-4 h-4 ml-1" />
-            </Button>
           </div>
 
           {/* Pastor photo */}
