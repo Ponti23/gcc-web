@@ -109,7 +109,7 @@ Ps Diony serves faithfully together with his wife, Irish, and they are blessed w
     name: "Ps Gilbert Balbido",
     credentials: "",
     role: "Associate Pastor",
-    photo: "/Ps_Gilbert_New.jpeg",
+    photo: "/Ps_Gilbert.jpeg",
     initials: "GB",
     bio: `Ps Gilbert Balbido is a committed pastor and teacher with a passion for strengthening people through the truth of God's Word. Originally from the Philippines and now based in Perth, Western Australia, he has a particular appreciation for the Old Testament and its relevance in shaping strong Biblical foundations for believers today. His teaching style is both practical and insightful, encouraging others to grow in wisdom, faith and spiritual maturity.
 

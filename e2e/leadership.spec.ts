@@ -2,10 +2,10 @@ import { test, expect } from "@playwright/test";
 
 const pastors = [
   { name: "Rev. Dr Dawson Elliott", photo: "/Ps_Dawson.PNG" },
-  { name: "Ps Anand Darshan", photo: null },
+  { name: "Ps Anand Darshan", photo: "/Ps_Anand.jpeg" },
   { name: "Ps Alex Cabanlit", photo: "/Ps_Alex.PNG" },
   { name: "Ps Diony Escarilla", photo: "/Ps_Diony.PNG" },
-  { name: "Ps Gilbert Balbido", photo: "/Ps_Gilbert.PNG" },
+  { name: "Ps Gilbert Balbido", photo: "/Ps_Gilbert.jpeg" },
 ];
 
 test.describe("Leadership page", () => {
@@ -34,16 +34,6 @@ test.describe("Leadership page", () => {
       expect(naturalWidth).toBeGreaterThan(0);
     });
   }
-
-  test("Ps Anand shows initials fallback (no photo)", async ({ page }) => {
-    // Scroll Ps Anand's section into view to trigger reveal animation
-    const anandHeading = page.getByRole("heading", { name: "Ps Anand Darshan" });
-    await anandHeading.scrollIntoViewIfNeeded();
-    // The initials "AD" appear in the fallback avatar div
-    const initialsEl = page.locator("div.font-display.text-primary").filter({ hasText: "AD" }).first();
-    await initialsEl.scrollIntoViewIfNeeded();
-    await expect(initialsEl).toBeVisible();
-  });
 
   test("footer renders", async ({ page }) => {
     await page.locator("footer").scrollIntoViewIfNeeded();
