@@ -7,10 +7,22 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies & build output
 node_modules
 dist
 dist-ssr
 *.local
+
+# Vite cache
+.vite/
+
+# Test artifacts
+test-results/
+playwright-report/
+coverage/
+
+# Claude Code (local config & scheduled tasks)
+.claude/
 
 # Editor directories and files
 .vscode/*
