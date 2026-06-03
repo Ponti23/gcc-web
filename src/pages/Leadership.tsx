@@ -73,7 +73,7 @@ Dawson is also the Founding/Senior Pastor of Grace Community Church — the offi
     name: "Ps Anand Darshan",
     credentials: "BIM, MIT&S, GDipCMT",
     role: "Associate Pastor",
-    photo: null,
+    photo: "/Ps_Anand.jpeg",
     initials: "AD",
     bio: `Ps Anand Darshan was born in Nepal and now lives in Perth, WA. He holds a "Bachelor of Information Management" Degree from St Xavier's College under Tribhuvan University, a "Master of Information Technology and Systems" Degree from the University of Tasmania, Australia, and a "Graduate Diploma of Christian Ministry and Theology" from the Bible College of Western Australia.
 
@@ -109,7 +109,7 @@ Ps Diony serves faithfully together with his wife, Irish, and they are blessed w
     name: "Ps Gilbert Balbido",
     credentials: "",
     role: "Associate Pastor",
-    photo: "/Ps_Gilbert.PNG",
+    photo: "/Ps_Gilbert_New.jpeg",
     initials: "GB",
     bio: `Ps Gilbert Balbido is a committed pastor and teacher with a passion for strengthening people through the truth of God's Word. Originally from the Philippines and now based in Perth, Western Australia, he has a particular appreciation for the Old Testament and its relevance in shaping strong Biblical foundations for believers today. His teaching style is both practical and insightful, encouraging others to grow in wisdom, faith and spiritual maturity.
 
