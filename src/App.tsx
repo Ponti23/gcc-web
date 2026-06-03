@@ -7,7 +7,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index.tsx";
 import About from "./pages/About.tsx";
 import Leadership from "./pages/Leadership.tsx";
-import Contact from "./pages/Contact.tsx";
+import Resources from "./pages/Resources.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -23,7 +23,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/leadership" element={<Leadership />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/resources" element={<Resources />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
