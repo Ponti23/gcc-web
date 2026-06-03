@@ -10,6 +10,7 @@ test.describe("Home page", () => {
       page.getByRole("heading", { name: /a place to belong, believe & become/i })
     ).toBeVisible();
     await expect(page.getByRole("link", { name: /plan your visit/i })).toBeVisible();
+    await expect(page.getByRole("link", { name: /watch sermons/i })).toBeVisible();
   });
 
   test("hero background image loads", async ({ page }) => {
@@ -38,6 +39,12 @@ test.describe("Home page", () => {
     await expect(img).toBeVisible();
     const naturalWidth = await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
     expect(naturalWidth).toBeGreaterThan(0);
+  });
+
+  test("sermons section renders sermon cards", async ({ page }) => {
+    await page.locator("#sermons").scrollIntoViewIfNeeded();
+    await expect(page.getByText("Finding Peace in the Storm")).toBeVisible();
+    await expect(page.getByText("The Power of Forgiveness")).toBeVisible();
   });
 
   test("footer contact info is visible", async ({ page }) => {

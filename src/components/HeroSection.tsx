@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import heroImage from "@/assets/church.png";
 import { Button } from "@/components/ui/button";
 
@@ -29,7 +28,10 @@ export default function HeroSection() {
           </p>
           <div className="flex flex-wrap gap-4 pt-2">
             <Button variant="hero" size="xl" asChild>
-              <Link to="/contact">Plan Your Visit</Link>
+              <a href="#services">Plan Your Visit</a>
+            </Button>
+            <Button variant="heroOutline" size="xl" asChild>
+              <a href="#sermons">Watch Sermons</a>
             </Button>
           </div>
           <p className="text-primary-foreground/70 text-xl md:text-2xl italic pt-2 max-w-lg leading-relaxed">
